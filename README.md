@@ -37,6 +37,12 @@ try:
     import nbformat
     from nbconvert import PythonExporter
 except:
+    %pip install pathlib
+    from pathlib import Path
+    print("Installed, imported pathlib and Path.")
+    %pip install requests
+    import requests
+    print("Installed and imported requests.")
     %pip install nbconvert
     import nbconvert
     from nbconvert import PythonExporter
