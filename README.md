@@ -194,7 +194,7 @@ Imported math.
 ![image](https://github.com/user-attachments/assets/2b98bf41-dc1b-4640-9277-bf95d9bbe62e)
 <br />
 The 1200 rows split equally into 400 rows of each species (i.e., 'setosa', 'versicolor', 'verginica'). The distribution of soil properties showed small differences between species found in different soil types. However, the most samples were taken from soil categorized as 'clay'.
-## 5. Visual exploration of numerical features
+## 4. Visual exploration of numerical features
 ```python
 EDA_numerical(dataset=df,
               ncols=2,
@@ -214,7 +214,7 @@ Imported math.
 ![image](https://github.com/user-attachments/assets/b4f9bbb8-636e-4792-bf91-f4f5bd012fbb)
 <br />
 The distribution of species and elevation exhibited large variances within species but did not differ between them. However, other metrics displayed higher differences between the species such as sepal length, sepal width, petal length and petal width, reflected by other parameter derived from these measurements. 
-## 6. Statistical summary of all features
+## 5. Statistical summary of all features
 ```python
 correlation_summary(dataset=df,
                     ncols=2,
@@ -222,7 +222,7 @@ correlation_summary(dataset=df,
                     dpi=200,
                     key='species')
 ```
-### 6.1 Subset 'setosa' of key 'species'
+### 5.1 Subset 'setosa' of key 'species'
 ```python
 Imported pandas
 Imported matplotlib.
@@ -289,7 +289,7 @@ Summary of statistical tests to determine best fitting correlation metric.
 ![image](https://github.com/user-attachments/assets/52ae1884-ade2-408f-be40-6a043bee284b)
 ![image](https://github.com/user-attachments/assets/f682f2f4-2eac-4592-a280-4e7d694ed118)
 <br /> 
-### 6.2 Subset 'versicolor' of key 'species'
+### 5.2 Subset 'versicolor' of key 'species'
 ```python
 Performed subsetting for 'versicolor' of provided key 'species'.
 
@@ -347,7 +347,7 @@ Summary of statistical tests to determine best fitting correlation metric.
 ![image](https://github.com/user-attachments/assets/683fd7ce-26b4-465f-9820-2623f8896ab6)
 ![image](https://github.com/user-attachments/assets/27a8a0f5-de84-43c9-8617-7afc13d42c7f)
 <br />
-### 6.3 Subset 'virginica' of key 'species'
+### 5.3 Subset 'virginica' of key 'species'
 ```python
 Performed subsetting for 'virginica' of provided key 'species'.
 
@@ -413,7 +413,7 @@ The displayed dashed red line in the histograms visualizes a normal distribution
   - area_ratios
 
 As this classification can be subjective, each case should be considered individually. The suggested classification by conditions met may differ from your categorization.
-### 6.4 Suggested correlation coefficient
+### 5.4 Suggested correlation coefficient
 With the completion of the function, suggested correlation coefficients per feature get output and saved via `pd.to_pickle` to be further processed using the next function, if desired.
 ```python
 Suggested correlation coefficient: pearson's r.
@@ -540,14 +540,14 @@ Suggested correlation coefficient: spearman's ρ.
 │ area_ratios                │ virginica      │
 ╰────────────────────────────┴────────────────╯
 ```
-## 7. Processing pickled data and visualizing relationships between columns
+## 6. Processing pickled data and visualizing relationships between columns
 ```python
 correlation_visualization(dataset=df,
                           corr='auto',
                           dpi=200,
                           key='species')
 ```
-### 7.1 Pearson's r
+### 6.1 Pearson's r
 ```python
 Imported pandas
 Imported seaborn.
@@ -640,7 +640,7 @@ Loaded pearson.pkl:
 ![image](https://github.com/user-attachments/assets/d61a4fbd-97b0-4e93-a6e1-59679104d7c4)
 ![image](https://github.com/user-attachments/assets/7d6d6e1e-ee80-41d5-8b00-8749a290ad37)
 <br />
-### 7.2 Spearman's ρ
+### 6.2 Spearman's ρ
 ```python
 Loaded spearman.pkl:
 ╭────┬────────────────────────────┬────────────╮
